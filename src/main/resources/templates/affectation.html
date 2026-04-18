@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Affectation Auteur</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="page">
+    <h2>Affectation Auteur</h2>
+    <hr>
+
+    <h4>Affectation des auteurs aux livres</h4>
+
+    <form action="/affectation" method="post">
+        <div class="form-row">
+            <label for="bookId">Livre :</label>
+            <select id="bookId" name="bookId" required>
+                <option value="" selected disabled>Sélectionner un livre</option>
+                <option th:each="b : ${books}"
+                        th:value="${b.id}"
+                        th:text="${b.titre}">
+                </option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="authorId">Auteur :</label>
+            <select id="authorId" name="authorId" required>
+                <option value="" selected disabled>Sélectionner un auteur</option>
+                <option th:each="a : ${authors}"
+                        th:value="${a.id}"
+                        th:text="${a.nom}">
+                </option>
+            </select>
+        </div>
+
+        <button class="btn-blue-small" type="submit">Ajouter</button>
+    </form>
+
+    <hr>
+
+    <h4>Liste de tous les auteurs</h4>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom Prénom</th>
+            <th>Points</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="a : ${allAuthors}">
+            <td th:text="${a.id}"></td>
+            <td th:text="${a.nom}"></td>
+            <td th:text="${a.points}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a class="back-link" th:href="@{/}">← Retour au Menu</a>
+</div>
+</body>
+</html>
+

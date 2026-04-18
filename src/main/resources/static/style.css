@@ -1,0 +1,119 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    padding: 24px;
+}
+
+.top-rule {
+    border: 0;
+    border-top: 4px solid #343a40;
+    margin: 0 0 18px 0;
+}
+
+.main-header {
+    max-width: 720px;
+    margin: 0 auto 20px auto;
+}
+
+.menu-card {
+    background: #ffffff;
+    max-width: 520px;
+    margin: 10px auto;
+    padding: 26px 28px;
+    border: 1px solid #ddd;
+}
+
+.page {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.form-row {
+    margin: 10px 0 14px 0;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    margin: 8px 0 4px 0;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+}
+
+.btn-blue {
+    display: block;
+    width: 100%;
+    background-color: #0d6efd;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #0d6efd;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-blue:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.btn-green {
+    background-color: #198754;
+    color: #ffffff;
+    padding: 7px 14px;
+    border-radius: 3px;
+    border: 1px solid #198754;
+    cursor: pointer;
+}
+
+.btn-green:hover {
+    background-color: #157347;
+    border-color: #146c43;
+}
+
+.btn-blue-small {
+    background-color: #0d6efd;
+    color: #ffffff;
+    padding: 7px 14px;
+    border-radius: 3px;
+    border: 1px solid #0d6efd;
+    cursor: pointer;
+}
+
+.btn-blue-small:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table th, .table td {
+    border: 1px solid #e6e6e6;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: #6f42c1;
+    text-decoration: underline;
+    font-size: 12px;
+}

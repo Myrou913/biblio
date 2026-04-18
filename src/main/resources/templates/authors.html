@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des Auteurs</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="page">
+    <h2>Gestion des Auteurs</h2>
+
+    <form action="/authors" method="post">
+        <div class="form-row">
+            <label for="nom">Nom et prénom :</label>
+            <input id="nom" type="text" name="nom" required>
+        </div>
+        <button class="btn-green" type="submit">Ajouter</button>
+    </form>
+
+    <hr>
+
+    <h3>Liste des Auteurs</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom et Prénom</th>
+            <th>NbrePoints</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="a : ${authors}">
+            <td th:text="${a.id}"></td>
+            <td th:text="${a.nom}"></td>
+            <td th:text="${a.points}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a class="back-link" th:href="@{/}">← Retour au Menu</a>
+</div>
+</body>
+</html>
+

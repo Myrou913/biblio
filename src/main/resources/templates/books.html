@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des Livres</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="page">
+    <h2>Gestion des Livres</h2>
+
+    <form action="/books" method="post">
+        <div class="form-row">
+            <label for="isbn">ISBN :</label>
+            <input id="isbn" type="text" name="isbn" required>
+        </div>
+
+        <div class="form-row">
+            <label for="titre">Titre :</label>
+            <input id="titre" type="text" name="titre" required>
+        </div>
+
+        <div class="form-row">
+            <label for="anneeParution">Année de parution :</label>
+            <input id="anneeParution" type="number" name="anneeParution" value="0" min="0" required>
+        </div>
+
+        <button class="btn-green" type="submit">Ajouter</button>
+    </form>
+
+    <hr>
+
+    <h3>Liste des Livres</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ISBN</th>
+            <th>Titre</th>
+            <th>Année de parution</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="l : ${books}">
+            <td th:text="${l.isbn}"></td>
+            <td th:text="${l.titre}"></td>
+            <td th:text="${l.anneeParution}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a class="back-link" th:href="@{/}">← Retour au Menu</a>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <title>JavaEE 2025</title>
+</head>
+<body>
+<hr class="top-rule">
+<div class="main-header">
+    <h1>JavaEE 2025</h1>
+    <p>Bonjour Mme <span th:text="${userName}"></span></p>
+</div>
+
+<div class="menu-card">
+    <h3>Menu : Gestion de la librairie Mariem</h3>
+    <p>Ajouter des livres</p>
+    <p>Ajouter des auteurs</p>
+    <p>Affectation des auteurs aux livres</p>
+    <hr>
+    <div class="button-group">
+        <a th:href="@{/authors}" class="btn-blue">Gérer les Auteurs</a>
+        <a th:href="@{/books}" class="btn-blue">Gérer les Livres</a>
+        <a th:href="@{/affectation}" class="btn-blue">Affecter Auteurs aux Livres</a>
+        <a href="#" class="btn-blue">Retour au CV</a>
+    </div>
+</div>
+</body>
+</html>
